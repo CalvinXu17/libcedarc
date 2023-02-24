@@ -65,13 +65,13 @@ extern enum CDX_LOG_LEVEL_TYPE GLOBAL_LOG_LEVEL;
 
 #include <stdio.h>
 #include <string.h>
-/*
+
 #define LOG_LEVEL_ERROR     "error  "
 #define LOG_LEVEL_WARNING   "warning"
 #define LOG_LEVEL_INFO      "info   "
 #define LOG_LEVEL_VERBOSE   "verbose"
 #define LOG_LEVEL_DEBUG     "debug  "
-*/
+
 extern const char *CDX_LOG_LEVEL_NAME[];
 #define CDCLOG(level, fmt, arg...)  \
     do { \
