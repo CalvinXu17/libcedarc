@@ -62,6 +62,7 @@ AC_CONFIG_FILES([Makefile
                 openmax/venc/Makefile
                 vencoder/base/Makefile
                 vencoder/Makefile
+				demo/vdecoderDemo/Makefile
                 ])
 
 AC_OUTPUT
