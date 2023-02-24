@@ -7,7 +7,7 @@ AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 ## 支持宏使用
 AM_INIT_AUTOMAKE([-Wall -Werror subdir-objects foreign])
 
-AC_CONFIG_SRCDIR([openmax/omxcore/inc/aw_omx_component.h])
+AC_CONFIG_SRCDIR([openmax/omxcore/include/aw_omx_component.h])
 AC_CONFIG_HEADERS([config.h])
 
 ## 不需要生成静态库
