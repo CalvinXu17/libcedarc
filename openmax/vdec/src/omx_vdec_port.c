@@ -25,6 +25,7 @@
 #include <stdlib.h>
 #include "omx_pub_def.h"
 #include "omx_vdec_config.h"
+#include "aw_profile_levels.h"
 
 void doEmptyThisBuffer(AwOmxVdecPort* mPort, OMX_BUFFERHEADERTYPE* pBufferHeader)
 {
