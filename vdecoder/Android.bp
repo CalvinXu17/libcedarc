@@ -1,0 +1,37 @@
+libvdecoder_src_common = ["fbm.c"]
+libvdecoder_src_common += ["pixel_format.c"]
+libvdecoder_src_common += ["sbm/sbmStream.c"]
+libvdecoder_src_common += ["sbm/sbmFrameH264.c"]
+libvdecoder_src_common += ["sbm/sbmFrameH265.c"]
+libvdecoder_src_common += ["sbm/sbmFrameBase.c"]
+libvdecoder_src_common += ["vdecoder.c"]
+libvdecoder_src_common += ["sbm/sbmFrameAvs2.c"]
+
+libvdecoder_inc_common = [
+    "frameworks/av/media/libcedarc/include",
+    "frameworks/av/media/libcedarc/base/include",
+    "frameworks/av/media/libcedarc/base/include/gralloc_metadata",
+    "frameworks/av/media/libcedarc/vdecoder/include",
+]
+cc_library_shared {
+    name: "libvdecoder",
+    vendor_available: true,
+    defaults: ["libcdc_config_defaults"],
+    srcs: libvdecoder_src_common,
+    include_dirs: libvdecoder_inc_common,
+    //LOCAL_CFLAGS :=
+
+    //# add libaw* for eng/user rebuild
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libui",
+        "libdl",
+        "libVE",
+        "libcdc_base",
+        "libvideoengine",
+        "libMemAdapter",
+    ],
+
+}

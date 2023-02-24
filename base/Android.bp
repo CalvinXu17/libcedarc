@@ -1,0 +1,46 @@
+cc_library_shared {
+    name: "libcdc_base",
+
+    vendor_available: true,
+
+    defaults: ["libcdc_config_defaults"],
+
+    // ANDROIDMK TRANSLATION ERROR: unsupported include
+    // include $(LOCAL_PATH)/../config.mk
+
+    srcs: [
+        "CdcIonUtil.c",
+        "CdcMessageQueue.c",
+        "CdcSysinfo.c",
+        "CdcMalloc.c",
+        "CdcLog.c",
+        "cdcIniparser/cdcIniparser.c",
+        "cdcIniparser/cdcIniparserapi.c",
+        "cdcIniparser/cdcDictionary.c",
+    ],
+
+    include_dirs: [
+        "frameworks/av/",
+        "system/core/libion/include/",
+        "system/core/include/",
+        "system/core/libion/kernel-headers/",
+        "frameworks/av/media/libcedarc/include/",
+        "frameworks/av/media/libcedarc/base/include/",
+        "frameworks/av/media/libcedarc/memory/ionMemory/",
+    ],
+    local_include_dirs: [
+        "include",
+        "cdcIniparser",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "liblog",
+    ],
+
+}
