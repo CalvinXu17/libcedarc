@@ -4,13 +4,13 @@
 AC_PREREQ([2.68])
 AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 
-## ֧�ֺ�ʹ��
+## 支持宏使用
 AM_INIT_AUTOMAKE([-Wall -Werror subdir-objects foreign])
 
 AC_CONFIG_SRCDIR([openmax/omxcore/include/aw_omx_component.h])
 AC_CONFIG_HEADERS([config.h])
 
-## ����Ҫ���ɾ�̬��
+## 不需要生成静态库
 AC_DISABLE_STATIC
 AM_SILENT_RULES([yes])
 ## support as
