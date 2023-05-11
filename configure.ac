@@ -4,13 +4,13 @@
 AC_PREREQ([2.68])
 AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 
-## Ö§³ÖºêÊ¹ÓÃ
+## Ö§ï¿½Öºï¿½Ê¹ï¿½ï¿½
 AM_INIT_AUTOMAKE([-Wall -Werror subdir-objects foreign])
 
-AC_CONFIG_SRCDIR([openmax/omxcore/inc/aw_omx_component.h])
+AC_CONFIG_SRCDIR([openmax/omxcore/include/aw_omx_component.h])
 AC_CONFIG_HEADERS([config.h])
 
-## ²»ÐèÒªÉú³É¾²Ì¬¿â
+## ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½É¾ï¿½Ì¬ï¿½ï¿½
 AC_DISABLE_STATIC
 AM_SILENT_RULES([yes])
 ## support as

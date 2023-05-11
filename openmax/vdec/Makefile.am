@@ -16,6 +16,7 @@ LOCAL_INCLUDE = -I../include \
                 -I./looper \
                 -I$(top_srcdir)/include \
                 -I$(top_srcdir)/openmax/omxcore/include  \
+				-I$(top_srcdir)/openmax/omxcore/tablelist/linux/  \
                 -I$(top_srcdir)/base/include \
                 -I$(top_srcdir)/ve/include
 

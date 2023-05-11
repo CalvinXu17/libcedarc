@@ -4109,7 +4109,7 @@ static void* ComponentVencThread(void* pThreadData)
 
             if(impl->bOpenStatisticFlag){
                 impl->mTimeUs2 = GetNowUs();
-                omx_logw("MicH264Enc, VideoEncodeOneFrame time %lld.\
+                omx_logw("MicH264Enc, VideoEncodeOneFrame time %ld.\
                      buffer by encoder %ld and by decoder %ld.",
                     (impl->mTimeUs2-impl->mTimeUs1), impl->m_outBufferCountOwnedByEncoder,
                     impl->m_outBufferCountOwnedByRender);

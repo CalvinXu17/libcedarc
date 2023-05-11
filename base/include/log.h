@@ -65,6 +65,7 @@ extern enum CDX_LOG_LEVEL_TYPE GLOBAL_LOG_LEVEL;
 
 #include <stdio.h>
 #include <string.h>
+
 /*
 #define LOG_LEVEL_ERROR     "error  "
 #define LOG_LEVEL_WARNING   "warning"
@@ -72,6 +73,7 @@ extern enum CDX_LOG_LEVEL_TYPE GLOBAL_LOG_LEVEL;
 #define LOG_LEVEL_VERBOSE   "verbose"
 #define LOG_LEVEL_DEBUG     "debug  "
 */
+
 extern const char *CDX_LOG_LEVEL_NAME[];
 #define CDCLOG(level, fmt, arg...)  \
     do { \
@@ -83,7 +85,7 @@ extern const char *CDX_LOG_LEVEL_NAME[];
 
 
 #define AWLOG(level, fmt, arg...)  \
-    printf("%s: %s <%s:%u>: "fmt"\n", level, LOG_TAG, __FUNCTION__, __LINE__, ##arg)
+    printf("%d: %s <%s:%u>: "fmt"\n", level, LOG_TAG, __FUNCTION__, __LINE__, ##arg)
 
 #define CC_LOG_ASSERT(e, fmt, arg...)                                       \
                 do {                                                        \

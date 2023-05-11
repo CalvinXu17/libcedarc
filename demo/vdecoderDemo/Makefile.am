@@ -3,7 +3,7 @@ include $(top_srcdir)/Makefile.inc
 
 bin_PROGRAMS = vdecoderdemo
 
-vdecoderdemo_SOURCES =  ./demoVdecoder.c
+vdecoderdemo_SOURCES =  ./rawStreamParser.c ./vdecoderDemo.c
 
 vdecoderdemo_CFLAGS = $(CFLAGS_CDXG)
 #jpegdemo_CPPFLAGS = $(CPPFLAGS_CDXG)

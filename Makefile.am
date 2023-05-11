@@ -1,4 +1,4 @@
 
-SUBDIRS = base memory vdecoder openmax\
-          vencoder/base \
-          vencoder
+SUBDIRS = base memory vencoder/base vencoder vdecoder openmax
+          
+          
