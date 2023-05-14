@@ -4,7 +4,7 @@ include $(top_srcdir)/Makefile.inc
 lib_LTLIBRARIES = libOmxCore.la
 
 libOmxCore_la_SOURCES = \
-                        tablelist/linux/aw_registry_table.c \
+                        tablelist/ceres/aw_registry_table.c \
                         aw_omx_component.c \
                         aw_omx_core.c
 
