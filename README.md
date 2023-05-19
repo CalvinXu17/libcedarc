@@ -15,6 +15,11 @@ make install
 
 **library增加了aarch64-linux-gnu动态链接库，该库由library/androidq_64下的动态链接库魔改elf文件后得到，可在GNU Linux下使用glibc编译连接使用。**
 
+1. 经测试发现，将安卓的全部so进行魔改时解码会有问题，因此最新commit中**仅**魔改了**libVE.so**，其余so文件由toolchain-sunxi-aarch64-glibc中so文件拷贝而来
+2. libawavs2.so与libawvp9HwAL.so只有androidq_64有而toolchain-sunxi-aarch64-glibc中没有，因此这两个so也由安卓so库魔改得到，但**未进行测试**
+3. toolchain-sunxi-aarch64-glibc不能使用的根本原因是因为其中的libVE.so未适配a133的VE，全志仅放出了安卓平台的含a133 VE的libVE.so。这点应该是全志故意为之，因为Linux内核包含了完整的VE驱动代码，并且安卓端的libVE.so也仅仅用到了libc而未使用安卓其他so库的任何功能，本质上编译出一份Linux glibc版本的so库是没有任何额外工作的
+4. 使用魔改的libVE.so + toolchain-sunxi-aarch64-glibc下的其余so库，经测试**jpeg编码、H264编码、mjpeg解码**正常，其余功能有待进一步测试
+
 魔改大致步骤如下：
 
 1. 去除bionic libc依赖，替换成glibc，去除不必要的安卓so库依赖
