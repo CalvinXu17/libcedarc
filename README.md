@@ -23,11 +23,8 @@ make install
 魔改大致步骤如下：
 
 1. 去除bionic libc依赖，替换成glibc，去除不必要的安卓so库依赖
-
 2. glibc不存在的bionic函数使用libcwrapper实现
-
 3. liblog库使用liblogwrapper替换
-
 4. 修改安卓使用的.rela.android重定位表，解码成Linux下的.rela重定位表
-
-5. 去除.fini_array避免程序结束后glibc执行清理工作时产生段错误
+5. 修改so库依赖
+6. ~~去除.fini_array避免程序结束后glibc执行清理工作时产生段错误~~
